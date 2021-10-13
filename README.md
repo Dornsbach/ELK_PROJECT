@@ -29,67 +29,51 @@ Load balancing ensures that the application will be highly resilient, in additio
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system statistics.
 
-The configuration details of each machine may be found below.
-
-
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| Web-1    | Web      | 10.0.0.5   | Linux            |
-| Web-2    | Web      | 10.0.0.7   | Linux            |
-| Elk-Server | DB Server | 10.1.0.5 | Linux           |
-
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- Local WorkStation #1 Public IP
+Only the Jump-Box and load balancer can accept connections from the Internet. Access these machines is only allowed from the following IP addresses:
+- Local WorkStation #1 172.217.22.14
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-
-A summary of the access policies in place can be found in the table below.
-
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+Machines within the network can only be accessed by the jump box.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because you are able to deploy many machines at once.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Installs Docker onto machines 
+- Puts Filebeat and Metricbeat onto Webservers
+- Downloads and launches the docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![alt text](https://github.com/Dornsbach/ELK_PROJECT/blob/dd15f123a19745be6c56535ad7989661f6754f09/Screen%20Shot%202021-10-13%20at%203.28.58%20PM.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- 10.0.0.5
+- 10.0.0.7
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- 10.0.0.5: Filebeat and Metricbeat
+- 10.0.0.7: Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat lets us collect log files and events then forwards them to be indexed to be read easliy.
+- Metricbeat lets us collect metrics and statistics from our OS and other services running on the server.
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+In order to use the playbook, you will need to have an Ansible control node already configured along with the Filebeat and Metricbeat congfig files updated. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the all the playbook files to your VM.
+- Update the files to make sure you have your webservers and user information correct.
+- Make sure to have both beat config files in this directory on the jumpbox ansible /etc/ansible/files. 
+- Run the playbooks, and navigate to your LB IP to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+
+- _Which file is the playbook? Anyfile containing "Playbook" Where do you copy it? These should be in /etc/ansible on the Jumpbox ansible. 
+- _Which file do you update to make Ansible run the playbook on a specific machine? the hosts file and all the config files need to be configed to your liking. How do I specify which machine to install the ELK server on versus which to install Filebeat on? The Elk server just needs to be on one machine all the rest hooked up to the network can have the beats installed.
+- _Which URL do you navigate to in order to check that the ELK server is running? Navigate to the IP of your loadbalancer. 
