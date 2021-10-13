@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![alt text](https://github.com/Dornsbach/ELK_PROJECT/blob/c88c069fee2f637df7d4974dac3b8aa38f286019/Elk_Project%20.jpg)
+![alt text](https://github.com/Dornsbach/ELK_PROJECT/blob/6feb92fb3fa8df960eb4c4173cf34312e79cf371/Elk_Project%20.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. 
 
@@ -44,7 +44,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- Local WorkStation #1 Public IP
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
