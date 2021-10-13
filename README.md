@@ -1,5 +1,5 @@
 # ELK_PROJECT
-ELK_NETWORK
+
 The files in this repository were used to configure the network depicted below.
 
 ![alt text](https://github.com/Dornsbach/ELK_PROJECT/blob/c88c069fee2f637df7d4974dac3b8aa38f286019/Elk_Project%20.jpg)
