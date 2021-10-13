@@ -34,10 +34,10 @@ The configuration details of each machine may be found below.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| Web-1    |          |            |                  |
-| Web-2    |          |            |                  |
-| Elk-Server |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Web-1    | Web      | 10.0.0.5   | Linux            |
+| Web-2    | Web      | 10.0.0.7   | Linux            |
+| Elk-Server | DB Server | 10.1.0.5 | Linux           |
 
 ### Access Policies
 
