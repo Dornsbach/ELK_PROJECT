@@ -6,11 +6,11 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. 
 
-[Elk-Install Playbook](https://github.com/Dornsbach/ELK_PROJECT/blob/4a799de3c7d8c1866743521b18de87015b9bcc73/Elk-Install)
+[Elk Install Playbook](https://github.com/Dornsbach/ELK_PROJECT/blob/4a799de3c7d8c1866743521b18de87015b9bcc73/Elk-Install)
 
-[Filebeat-Playbook](https://github.com/Dornsbach/ELK_PROJECT/blob/487a25e9ad8734d0cc48ce66447e44387b71747e/filebeat-playbook.txt)
+[Filebeat Playbook](https://github.com/Dornsbach/ELK_PROJECT/blob/487a25e9ad8734d0cc48ce66447e44387b71747e/filebeat-playbook.txt)
 
-[Metricbeat-Playbook](https://github.com/Dornsbach/ELK_PROJECT/blob/487a25e9ad8734d0cc48ce66447e44387b71747e/metricbeat-playbook.txt)
+[Metricbeat Playbook](https://github.com/Dornsbach/ELK_PROJECT/blob/487a25e9ad8734d0cc48ce66447e44387b71747e/metricbeat-playbook.txt)
 
 This document contains the following details:
 - Description of the Topologu
