@@ -4,9 +4,9 @@ The files in this repository were used to configure the network depicted below.
 
 ![alt text](https://github.com/Dornsbach/ELK_PROJECT/blob/c88c069fee2f637df7d4974dac3b8aa38f286019/Elk_Project%20.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. 
 
-  - _TODO: Enter the playbook file._
+[Elk-Install Playbook](https://github.com/Dornsbach/ELK_PROJECT/blob/4a799de3c7d8c1866743521b18de87015b9bcc73/Elk-Install)
 
 This document contains the following details:
 - Description of the Topologu
