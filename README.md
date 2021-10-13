@@ -74,6 +74,7 @@ SSH into the control node and follow the steps below:
 - Run the playbooks, and navigate to your LB IP to check that the installation worked as expected.
 
 
-- _Which file is the playbook? Anyfile containing "Playbook" Where do you copy it? These should be in /etc/ansible on the Jumpbox ansible. 
-- _Which file do you update to make Ansible run the playbook on a specific machine? the hosts file and all the config files need to be configed to your liking. How do I specify which machine to install the ELK server on versus which to install Filebeat on? The Elk server just needs to be on one machine all the rest hooked up to the network can have the beats installed.
-- _Which URL do you navigate to in order to check that the ELK server is running? Navigate to the IP of your loadbalancer. 
+- Which file is the playbook? Any file containing "Playbook" Where do you copy it? These should be in /etc/ansible on the Jumpbox ansible. 
+- Which file do you update to make Ansible run the playbook on a specific machine? The hosts file and all the config files need to be configed to your liking. 
+How do I specify which machine to install the ELK server on versus which to install Filebeat on? The Elk server just needs to be on one machine all the rest hooked up to the network can have the beats installed.
+- Which URL do you navigate to in order to check that the ELK server is running? Navigate to the IP of your loadbalancer. 
